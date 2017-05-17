@@ -35,9 +35,9 @@
     <plugin name="cordova-plugin-device" spec="1.1.4" />
     <plugin name="cordova-plugin-splashscreen" spec="~4.0.1" />
     <plugin name="twitter-connect-plugin" spec="~0.6.0">
-        <variable name="FABRIC_KEY" value="your_value" />
+        <variable name="FABRIC_KEY" value="dbf48d8f78bb16f9d9c54d737d7792891eb24607" />
     </plugin>
-    <preference name="TwitterConsumerKey" value="your_value" />
-    <preference name="TwitterConsumerSecret" value="your_value" />
+    <preference name="TwitterConsumerKey" value="UaIZArNbIcHIWG1TaMbBt40uw" />
+    <preference name="TwitterConsumerSecret" value="ExncFRKfOd8IWMsldIXyS0Z7XAi5L5bTvbVlwUM9UMJO6fsYe5" />
     <plugin name="cordova-plugin-nativestorage" spec="~2.0.2" />
 </widget>
