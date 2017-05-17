@@ -37,6 +37,7 @@ export class LoginPage {
           picture: user.profile_image_url_https
         }).then(function() {
           nav.push(UserPage);
+          loading.dismiss();
         })
       }, function(error){
         loading.dismiss();
