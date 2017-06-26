@@ -72,7 +72,7 @@
             "cordova-plugin-whitelist": {},
             "ionic-plugin-keyboard": {},
             "twitter-connect-plugin": {
-                "FABRIC_KEY": "dbf48d8f78bb16f9d9c54d737d7792891eb24607"
+                "FABRIC_KEY": "your_fabric_key"
             }
         },
         "platforms": [
