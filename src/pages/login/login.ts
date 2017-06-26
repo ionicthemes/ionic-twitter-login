@@ -1,7 +1,8 @@
 import { Component } from '@angular/core';
-import { NativeStorage, TwitterConnect } from 'ionic-native';
 import { NavController, LoadingController } from 'ionic-angular';
 import { UserPage } from '../user/user';
+import { TwitterConnect } from '@ionic-native/twitter-connect';
+import { NativeStorage } from '@ionic-native/native-storage';
 
 @Component({
   selector: 'page-login',
@@ -9,8 +10,11 @@ import { UserPage } from '../user/user';
 })
 export class LoginPage {
 
-  constructor(public navCtrl: NavController,
-    public loadingCtrl: LoadingController) {}
+  constructor(
+    public navCtrl: NavController,
+    public loadingCtrl: LoadingController,
+    public tw: TwitterConnect,
+    public nativeStorage: NativeStorage) {}
 
   doTwLogin(){
     let nav = this.navCtrl;
@@ -19,13 +23,13 @@ export class LoginPage {
     });
 
     loading.present();
-
+    let env = this;
     //Request for login
-    TwitterConnect.login().then(function(result) {
+    this.tw.login().then(function(result) {
       //Get user data
-      TwitterConnect.showUser().then(function(user){
+      env.tw.showUser().then(function(user){
         //Save the user data in NativeStorage
-        NativeStorage.setItem('twitter_user',
+        env.nativeStorage.setItem('twitter_user',
         {
           name: user.name,
           userName: user.screen_name,
@@ -33,6 +37,7 @@ export class LoginPage {
           picture: user.profile_image_url_https
         }).then(function() {
           nav.push(UserPage);
+          loading.dismiss();
         })
       }, function(error){
         loading.dismiss();
