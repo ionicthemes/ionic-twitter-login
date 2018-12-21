@@ -1,5 +1,7 @@
 {
-  "name": "ionic2-twitter-login",
-  "app_id": "",
-  "type": "ionic-angular"
+  "name": "ionic4-twitter-login",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "angular"
 }

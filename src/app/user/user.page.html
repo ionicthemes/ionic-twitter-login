@@ -1,0 +1,13 @@
+<ion-content>
+  <ion-card>
+    <ion-img [src]="user.picture"></ion-img>
+    <ion-card-header>
+      <ion-card-title>{{user.name}}</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <p>@{{user.userName}}</p>
+      <p>Followers: {{user.followers}}</p>
+    </ion-card-content>
+    <ion-button expand="block" (click)="doTwLogout()">Log Out</ion-button>
+  </ion-card>
+</ion-content>
